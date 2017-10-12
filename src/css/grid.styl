@@ -105,7 +105,7 @@
 
 // GRID
 
-grid($width = false, $gutter = false, $size = false, $cols = 12)
+grid-maker($width = false, $gutter = false, $size = false, $cols = 12)
 
   if $width
     .container
@@ -114,9 +114,8 @@ grid($width = false, $gutter = false, $size = false, $cols = 12)
   if $gutter
     .grid-item
       padding: 0 ( $gutter / 2 )
-      &.no-gutter
-        padding-left: 0
-        padding-right: 0
+    .text-columns
+      column-gap: $gutter
 
   // COLUMN SIZES & OFFSETS
 
@@ -133,6 +132,10 @@ grid($width = false, $gutter = false, $size = false, $cols = 12)
         max-width: ( 100% / $cols ) * col
       .grid-column > .item-{$size}-{col}
         max-height: ( 100% / $cols ) * col
+
+    for count in 1..4
+      .text-columns-{$size}-{count}
+        column-count: count
 
 // MARGINS & PADDING
 
@@ -196,22 +199,3 @@ space-maker($micro = false, $tiny = false, $small = false, $basic = false, $mid 
       padding-top: $large
     .padding-bottom-large
       padding-bottom: $large
-
-// GRID TEST
-
-.grid-test
-  .container
-    background: lightyellow
-    border: yellow 2px solid
-  .grid-item
-    background: lightgrey
-    border: grey 2px
-  .grid-row
-    border: red 2px solid
-    background: pink
-  .grid-column
-    border: blue 2px solid
-    background: lightblue
-  .grid-item
-    border-style: dashed
-    

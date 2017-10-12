@@ -1,52 +1,15 @@
-// FONTS
-
-// declare font families here
-
-$font-sans = font-stack('Helvetica');
-$font-serif = font-stack('Georgia');
-
-// ******************************************************
-
-// VARIABLES
-
-$font-size-larger = 1.3rem
-
-$font-leading-basic = 1.35
-$font-leading-tighter = 1.15
-$font-leading-larger = 1.45
-
-$font-tracking-basic = .001em
-$font-tracking-wider = .05em
-
-// ******************************************************
-
-// TYPOGRAPHY
-
-html
-  font-family: $font-sans
-  letter-spacing: $font-tracking-basic
-
-body
-  line-height: $font-leading-basic
+h1, h2, h3, h4, h5, h6
+  margin: 0
 
 p
   margin-bottom: 1rem
 
 // FONT RULES
 
-.font-sans
-  font-family: $font-sans
-
-.font-serif
-  font-family: $font-serif
-
-.font-larger
-  font-size: $font-size-larger
-
-.font-italic
+em, .font-italic
   font-style: italic
 
-.font-bold
+strong, .font-bold
   font-weight: bold
 
 .font-small-caps
@@ -80,6 +43,10 @@ a:active,
 a:visited
   color: inherit
   text-decoration: none
+
+a.link-underline,
+p a
+  text-decoration: underline
 
 font-sizes($size-basic = false, $size-extra = false, $size-large = false, $size-mid = false, $size-small = false, $size-tiny = false, $size-micro = false)
 
