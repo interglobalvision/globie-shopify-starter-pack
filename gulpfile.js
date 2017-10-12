@@ -1,5 +1,4 @@
 var gulp = require('gulp'),
-  config = require('./gulpconfig.json'),
   watch = require('gulp-watch'),
   rename = require('gulp-rename'),
   notify = require('gulp-notify'),
