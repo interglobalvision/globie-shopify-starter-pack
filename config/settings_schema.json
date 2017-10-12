@@ -4,23 +4,23 @@
     "settings": [
       {
         "type":      "radio",
-        "id":        "front_background",
-        "label":     "Select background",
+        "id":        "radio_option",
+        "label":     "Select Option",
         "options": [
-          { "value": "image", "label": "Image" },
-          { "value": "video", "label": "Video" }
+          { "value": "option1", "label": "Option 1" },
+          { "value": "option2", "label": "Option 2" }
         ],
-        "default":   "image"
+        "default":   "option1"
       },
       {
         "type": "image_picker",
-        "id": "front_background_image",
-        "label": "Background image"
+        "id": "image_option",
+        "label": "Image option"
       },
       {
         "type": "video_url",
-        "id": "front_background_video",
-        "label": "Background video URL",
+        "id": "youtube_option",
+        "label": "YouTube Option",
         "accept": ["youtube"]
       }
     ]
